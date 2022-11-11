@@ -46,10 +46,6 @@ Technologies that I used to develop this web client
 
 ## 💻 Getting started
 
-### Requirements
-
-- Have this application's [API](https://github.com/italocedrosales/nlw-copa) running
-
 **Clone the project and access the folder**
 
 ```bash
