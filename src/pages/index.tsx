@@ -1,10 +1,12 @@
 import { FormEvent, useState } from 'react'
 import { GetServerSideProps } from 'next'
 import Image from 'next/image'
+
 import appPreviewImg from '../assets/app-nlw-copa-preview.png'
 import logoImg from '../assets/logo.svg'
 import userAvartarExempleImg from '../assets/users-avatar-example.png'
 import iconCheckImg from '../assets/icon-check.svg'
+
 import { api } from '../server/axios'
 
 interface HomeProps {
@@ -112,7 +114,7 @@ export default function Home({ poolCount, guessCount, userCount }: HomeProps) {
 export const getServerSideProps: GetServerSideProps = async () => {
   const [poolCountResponse, guessCountResponse, userCountResponse] =
     await Promise.all([
-      api.get('/pools/count'),
+      api.get('/polls/count'),
       api.get('/guesses/count'),
       api.get('/users/count'),
     ])
